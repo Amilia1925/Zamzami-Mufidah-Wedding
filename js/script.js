@@ -502,3 +502,4 @@ function myFunction() {
             document.execCommand("copy");
             $temp.remove();
           }
+          

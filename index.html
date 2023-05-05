@@ -14,6 +14,8 @@
     <!-- Page Title -->
     <title> Zamzami &amp; Mufidah </title>
 
+    <link rel="stylesheet" href="icon/css/all.css"
+    >
     <!-- Favicon and Touch Icons -->
     <link href="images/32x32.png" rel="shortcut icon" type="image/png">
     <link href="images/32x32.png" rel="apple-touch-icon">
@@ -47,11 +49,13 @@
 </head>
 
 <body id="home">
-    <audio id="musicplayer" autoplay hidden>
-        <source src="/musik/adinda.mp3" />
+    <audio id="musicplayer" autoplay>
+        <source src="/musik/adindamp3" />
       </audio>
-    
-
+     
+       
+      
+      
     <div class="page-wrapper">
 
         <!-- Preloader -->
@@ -97,6 +101,45 @@
                 <div class="logo-bottom-shape wow fadeInDown" data-wow-delay="4s">
                     <span>Z <i class="fa fa-heart"></i> M</span>
                 </div>
+            </div>
+            <div class="song">
+            <button class="butau" onclick="toggleMusic()" id="btn-playback" data-play="false">
+                <i class="fa-regular fa-circle-play fa-beat-fade fa-3x" style="color: #aa9a45;"></i>
+              </button>
+            </div>
+              <audio id="audio" src="musik/adinda.mp3" autoplay>
+              <script>
+                const myAudio = document.getElementById("audio");
+                const btn = document.getElementById("btn-playback");
+                const btnIcon = document.querySelector("#btn-playback > i");
+                const btnText = document.getElementById("btn-text");
+                
+                const toggleMusic = () => {      
+                  const dataPlay = btn.getAttribute('data-play');
+                        
+                  if(dataPlay === 'false') {
+                    btn.setAttribute('data-play', 'true');
+                    myAudio.play();
+                    btnIcon.classList.remove("fa-circle-play");
+                    btnIcon.classList.add("fa-circle-pause");
+                    
+                  } else {
+                    btn.setAttribute('data-play', 'false');
+                    myAudio.pause();
+                    btnIcon.classList.remove("fa-circle-pause");
+                    btnIcon.classList.add("fa-circle-play");
+                   
+                  }
+                };
+                
+                myAudio.onpause = () => {
+                  btn.setAttribute('data-play', 'false');
+                    myAudio.pause();
+                    btnIcon.classList.remove("fa-circle-pause");
+                    btnIcon.classList.add("fa-circle-play");
+                    
+                };
+            </script>
             </div>
         </header>
         <!-- end of header -->
@@ -264,6 +307,8 @@
         </section>
         <!-- end of couple -->
 
+        
+                
 
         <!-- start events -->
         <section class="events section-padding" id="events">
@@ -565,6 +610,9 @@
 
     <!-- Custom script for this template -->
     <script src="js/script.js"></script>
+
+    <!-- the DOM will be available here -->
+    <script src="script.js"></script>
 </body>
 
 <!-- Mirrored from astheme.ourdreamit.com/sweetheart/p-s-t/grid-gallery/index.html by Wibshoot Website Copier/3.x [XR&CO'2023], Tue, 28 Februari 2023 18:09:23 WIB -->
