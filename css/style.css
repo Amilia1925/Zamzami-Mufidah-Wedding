@@ -948,6 +948,23 @@ header #navbar .navbar-nav > .open > a:hover {
   z-index: 20;
 }
 
+.song {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  z-index: 20;
+}
+
+.butau {
+  border: none;
+  color: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline;
+  text-align: center;
+  background-color: transparent;
+}
+
 @media (max-width: 767px) {
   .logo-bottom-shape-wrapper .logo-bottom-shape {
     left: 58px;
