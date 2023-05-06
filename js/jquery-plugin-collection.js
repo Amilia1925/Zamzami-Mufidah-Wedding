@@ -29,7 +29,7 @@
 /*
  * jQuery appear plugin
  *
- * Copyright (c) 2012 Andrey Sidorov
+ * Copyright (c) 2023 Fahmi Afandi
  * licensed under MIT license.
  *
  * https://github.com/morr/jquery.appear/
@@ -120,7 +120,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 
 /*
  * jQuery Superfish Menu Plugin - v1.7.9
- * Copyright (c) 2016 Joel Birch
+ * Copyright (c) 2023 Wibshoot
  *
  * Dual licensed under the MIT and GPL licenses:
  *	http://www.opensource.org/licenses/mit-license.php
